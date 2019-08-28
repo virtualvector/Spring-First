@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
                   "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
-    
-   
-    
-    <beans>
-    
-    	<bean id = "myEngineer" class="com.sample.socgen.SpringFirst.Engineer">
-    	<property name="userName" value="rohith"></property>
-    	<property name="userId" value="22"></property>
-    	
-    	
-    	
-    	
-    	</bean>
-    
-    </beans>
+
+
+
+<beans>
+
+	<bean id="myEngineer"
+		class="com.sample.socgen.SpringFirst.Engineer">
+		<property name="userName" value="rohith"></property>
+		<property name="userId" value="22"></property>
+	</bean>
+	
+	<bean id="myPlumber"
+		class="com.sample.socgen.SpringFirst.Plumber">
+		<property name="name" value="plumber1"></property>
+		<property name="engg" ref="myEngineer"></property>
+	</bean>
+
+</beans>
     
