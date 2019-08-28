@@ -74,6 +74,17 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
 </bean>  
 
 ~~~~
+
+### Inner Bean
+~~~~
+<bean id="myEngineer" class="com.sample.socgen.SpringFirst.Engineer">
+    <constructor-arg>
+		<bean class="">
+			<property ...> </property>
+		</bean>
+	</constructor-arg>
+</bean> 
+~~~~
     	
 
 
