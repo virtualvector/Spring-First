@@ -20,7 +20,9 @@ Spring works on IOC(Inversion of control) and DI (Dependency Injection)
 ### (Creating a spring container) 
 - in src/main/java
 - add a Doctype inside xml file 
-- <bean id = "unique identifier" class="fully qualified name of the class"> </bean>	
+~~~~
+<bean id = "unique identifier" class="fully qualified name of the class"> </bean>	
+~~~~
 
 -------------------
 ## All these inside app.java
