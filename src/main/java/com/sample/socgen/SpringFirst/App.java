@@ -13,6 +13,6 @@ public class App
     	ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
     	
     	Engineer engineer = context.getBean("myEngineer",Engineer.class);
-        System.out.println( "Hello World!" );
+       System.out.println(engineer.getUserName()+Integer.toString(engineer.getUserId()));
     }
 }

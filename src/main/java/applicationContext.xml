@@ -7,6 +7,11 @@
     <beans>
     
     	<bean id = "myEngineer" class="com.sample.socgen.SpringFirst.Engineer">
+    	<property name="userName" value="rohith"></property>
+    	<property name="userId" value="22"></property>
+    	
+    	
+    	
     	
     	</bean>
     
