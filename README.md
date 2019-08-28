@@ -1,4 +1,5 @@
-"# Spring-First" 
+#Sring Project With Notes
+
 Spring works on IOC(Inversion of control) and DI (Dependency Injection)
 
 1. create a new maven project (select maven-quick-start archtype)
