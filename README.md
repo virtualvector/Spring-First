@@ -40,8 +40,7 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
 ## Dependency Injection
 ### Setter Injection (for primitives)
 ~~~~
-<bean id="myEngineer"
-	class="com.sample.socgen.SpringFirst.Engineer">
+<bean id="myEngineer" class="com.sample.socgen.SpringFirst.Engineer">
 	<property name="userName" value="rohith"></property>
 	<property name="userId" value="22"></property>
 </bean>        
@@ -49,16 +48,14 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
 
 ### Constructor Injection
 ~~~~
-<bean id="myEngineer"
-	class="com.sample.socgen.SpringFirst.Engineer">
+<bean id="myEngineer" class="com.sample.socgen.SpringFirst.Engineer">
 	<constructor-arg value="rohith"></constructor-arg>
 </bean>        
 ~~~~
 
 ### Setter Injection (for Object types)
 ~~~~
-<bean id="myEngineer"
-	class="com.sample.socgen.SpringFirst.Engineer">
+<bean id="myEngineer" class="com.sample.socgen.SpringFirst.Engineer">
     <property name="address" ref="address-bean-id">
 </bean>        
 ~~~~
