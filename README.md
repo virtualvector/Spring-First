@@ -60,6 +60,20 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
     <property name="address" ref="address-bean-id">
 </bean>        
 ~~~~
+
+### (Initializing collections )
+~~~~
+<bean id="myEngineer" class="com.sample.socgen.SpringFirst.Engineer">
+    <property name="address" >
+		<list>
+			<ref bean="address1"/>
+			<ref bean="address2"/>
+			<ref bean="address3"/>
+		</list>
+	</property>
+</bean>  
+
+~~~~
     	
 
 
