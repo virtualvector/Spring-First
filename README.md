@@ -85,6 +85,9 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
 	</constructor-arg>
 </bean> 
 ~~~~
-    	
+
+- There is a init and destroy for each bean.
+- There is also a default-init and destroy for all beans as a whole.
+  	
 
 

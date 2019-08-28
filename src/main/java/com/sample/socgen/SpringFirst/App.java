@@ -14,6 +14,10 @@ public class App {
 //		System.out.println(engineer.getUserName() + Integer.toString(engineer.getUserId() ));
 //		
 		Plumber plum = context.getBean("myPlumber",Plumber.class);
-		System.out.println(plum.getName()+" "+plum.getEngg().getUserName() + " " + plum.getEngg().getUserId());
+		//System.out.println(plum.getName()+" "+plum.getEngg().getUserName() + " " + plum.getEngg().getUserId());
+		
+		for(Engineer eng: plum.getEnggs() ) {
+			System.out.println(eng.getUserName()+" "+eng.getUserId());
+		}
 	}
 }

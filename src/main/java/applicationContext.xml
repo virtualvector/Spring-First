@@ -11,11 +11,25 @@
 		<property name="userName" value="rohith"></property>
 		<property name="userId" value="22"></property>
 	</bean>
-	
-	<bean id="myPlumber"
-		class="com.sample.socgen.SpringFirst.Plumber">
+
+	<bean id="myPlumber" class="com.sample.socgen.SpringFirst.Plumber">
 		<property name="name" value="plumber1"></property>
-		<property name="engg" ref="myEngineer"></property>
+		<property name="enggs">
+			<list>
+				<ref bean="myEngineer" />
+				<bean class="com.sample.socgen.SpringFirst.Engineer">
+					<property name="userName" value="raja"></property>
+					<property name="userId" value="23"></property>
+				</bean>
+				
+				<bean class="com.sample.socgen.SpringFirst.Engineer">
+					<property name="userName" value="rani"></property>
+					<property name="userId" value="24"></property>
+				</bean>
+			</list>
+		</property>
+
+
 	</bean>
 
 </beans>
