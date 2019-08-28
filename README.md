@@ -31,15 +31,14 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
 -------------------
 ## Dependency Injection
 ### Setter Injection
-<pre>
-    <code>
+~~~~
         <bean id="myEngineer"
 		class="com.sample.socgen.SpringFirst.Engineer">
 		<property name="userName" value="rohith"></property>
 		<property name="userId" value="22"></property>
 	    </bean>
-    </code>
-</pre>
+~~~~
+
     	
 
 
