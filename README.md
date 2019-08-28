@@ -61,7 +61,7 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
 </bean>        
 ~~~~
 
-### (Initializing collections )
+### Initializing collections 
 ~~~~
 <bean id="myEngineer" class="com.sample.socgen.SpringFirst.Engineer">
     <property name="address" >
