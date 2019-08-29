@@ -151,7 +151,7 @@ Address addressOne;
   - @PostConstruct -> for specifying bean init method
   - @PreDestroy -> for specifying  destroy method
 
-- *** Spring Streotype Annotations ***
+-  ***Spring Streotype Annotations***
   - **MVC Based**
   - @Controller -> instead of @Component (stand for C in MVC)
   - @Repository -> for dao class (M in MVC)
