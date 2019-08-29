@@ -100,6 +100,7 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
 ## for annotations to work
 - do this in the <beans> tag inside xml file
 - add the xml namespaces for annotations
+	- link : https://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s11.html
 - and remove the doctype i.e 
 
 ~~~~
@@ -107,7 +108,7 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
 ~~~~
 
 from the xml file
--link : https://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s11.html
+
 
 
 ~~~~
