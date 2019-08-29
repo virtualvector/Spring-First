@@ -3,12 +3,18 @@ package com.sample.socgen.SpringFirst;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 
-
+@PropertySource("classpath:test.properties")
 public class Plumber {
 	String name;
 	List<Engineer> enggs;
 	Engineer singleEngineer;
+	
+	@Value("${userKey}")
+	String user;
+	
 	
 	public Engineer getSingleEngineer() {
 		return singleEngineer;

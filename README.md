@@ -172,6 +172,28 @@ class ABC implements... {
 ~~~~
 
 
+--------------------
+# Reading from Property files in spring
+- Property file is for reading static data 
+- create a folder called resources under main which is under src (not src/main)
+- inside resources add abc.properties files
+- name=rohith be one entry in the property file
+
+# Accessing from the property file
+- before adding @Component add  `@PropertySource("classpath:test.properties") ` 
+- and just above the variable to which you want to inject use :
+  ~~~~
+	
+	@Value("${userKey}")
+	String user;
+	// here userKey is the key inside properties file
+	~~~~
+
+	
+
+	
+	
+
 
 
 
