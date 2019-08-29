@@ -152,10 +152,10 @@ Address addressOne;
   - @PreDestroy -> for specifying  destroy method
 
 -  ***Spring Streotype Annotations***
-  - **MVC Based**
-  - @Controller -> instead of @Component (stand for C in MVC)
-  - @Repository -> for dao class (M in MVC)
-  - @SErvice -> for Service class
+     - **MVC Based**
+     - @Controller -> instead of @Component (stand for C in MVC)
+     - @Repository -> for dao class (M in MVC)
+     - @SErvice -> for Service class
 
 
 --------------------
