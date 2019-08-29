@@ -96,9 +96,10 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
 </bean> 
 ~~~~
 
+# Annotations
 ---------------------
 ## for annotations to work
-- do this in the <beans> tag inside xml file
+- do this in the <span><beans></span>tag inside xml file
 - add the xml namespaces for annotations
 	- link : https://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s11.html
 
@@ -133,7 +134,44 @@ from the xml file
 public void setAddress(Address address){
 	this.address = address;
 }
+
+//Autowired can be used directly upon the variable
+
+@Autowired
+Address addressOne;
+// now addressOne autowired
+// **In this case, no need of setter method also. you can just delete the seteter method and it would still work fine.**
 ~~~~
+
+--------------------
+
+- ***JSR (java specification resource) 250 Specific annotations***
+  - These are standard across frameworks
+  - @Resource(name="address") is used instead of @Autowire and @Qualifier
+  - @PostConstruct -> for specifying bean init method
+  - @PreDestroy -> for specifying  destroy method
+
+- *** Spring Streotype Annotations ***
+  - **MVC Based**
+  - @Controller -> instead of @Component (stand for C in MVC)
+  - @Repository -> for dao class (M in MVC)
+  - @SErvice -> for Service class
+
+
+--------------------
+
+## Annotation for bean
+You have put <span> <context:component-scan base-package="com...package.."></context:somponent-scan></span> in xml file
+~~~~
+@Component("yourIdAsYourWishInCamelCase")
+class ABC implements... {
+
+}
+//By using this, bean is registered automatically. no need to create explicitly in the xml file
+//you can use @Controller instead of @Component
+~~~~
+
+
 
 
 

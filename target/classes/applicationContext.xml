@@ -1,19 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
-                  "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 
 
-<beans>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+               
+     <context:annotation-config/>
 
 	<bean id="myEngineer"
 		class="com.sample.socgen.SpringFirst.Engineer">
 		<property name="userName" value="rohith"></property>
 		<property name="userId" value="22"></property>
 	</bean>
-
+	
+	<bean id="singleEngineer"
+		class="com.sample.socgen.SpringFirst.Engineer">
+		<property name="userName" value="single rohith"></property>
+		<property name="userId" value="10000022"></property>
+	</bean>
+	
+	
+	
+	
 	<bean id="myPlumber" class="com.sample.socgen.SpringFirst.Plumber">
-		<property name="name" value="plumber1"></property>
+		<property name="name" value="rajua"></property>
 		<property name="enggs">
 			<list>
 				<ref bean="myEngineer" />
@@ -28,6 +44,8 @@
 				</bean>
 			</list>
 		</property>
+		<!-- <property name="singleEngineer" ref="singleEngineer"></property> -->
+		
 
 
 	</bean>
