@@ -155,13 +155,13 @@ Address addressOne;
      - **MVC Based**
      - @Controller -> instead of @Component (stand for C in MVC)
      - @Repository -> for dao class (M in MVC)
-     - @SErvice -> for Service class
+     - @Service -> for Service class
 
 
 --------------------
 
 ## Annotation for bean
-You have put <span> <context:component-scan base-package="com...package.."></context:somponent-scan></span> in xml file
+You have put `<context:component-scan base-package="com...package.."></context:component-scan>`  in xml file
 ~~~~
 @Component("yourIdAsYourWishInCamelCase")
 class ABC implements... {
@@ -188,6 +188,34 @@ class ABC implements... {
 	String user;
 	// here userKey is the key inside properties file
 	~~~~
+
+## Creating bean directly without going into xml
+- first put  `<context:component-scan base-package="com...package.."></context:component-scan>`  inside config xml file
+- put @Configuration upon the class in which you want to put @bean
+- illustrated below
+
+``` code
+@Autowired
+List<String> injectEngg;
+```
+Now in App.java file do this.
+
+``` code
+@Configuration
+public class App {
+	
+	@Bean
+	public List<String> injectEngg(){
+		return Arrays.asList("a","b");
+	}
+	
+	public static void main(String[] args) {
+		....
+		System.out.println(plum.getInjectEngg().get(0));
+	}
+}
+```
+
 
 	
 
