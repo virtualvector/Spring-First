@@ -14,42 +14,12 @@
      <context:annotation-config/>
      <context:component-scan base-package="com.sample.socgen.SpringFirst"></context:component-scan>
 
-	<bean id="myEngineer"
-		class="com.sample.socgen.SpringFirst.Engineer">
-		<property name="userName" value="rohith"></property>
-		<property name="userId" value="22"></property>
-	</bean>
-	
-	<bean id="singleEngineer"
-		class="com.sample.socgen.SpringFirst.Engineer">
-		<property name="userName" value="single rohith"></property>
-		<property name="userId" value="10000022"></property>
-	</bean>
 	
 	
 	
 	
-	<bean id="myPlumber" class="com.sample.socgen.SpringFirst.Plumber">
-		<property name="name" value="rajua"></property>
-		<property name="enggs">
-			<list>
-				<ref bean="myEngineer" />
-				<bean class="com.sample.socgen.SpringFirst.Engineer">
-					<property name="userName" value="raja"></property>
-					<property name="userId" value="23"></property>
-				</bean>
-				
-				<bean class="com.sample.socgen.SpringFirst.Engineer">
-					<property name="userName" value="rani"></property>
-					<property name="userId" value="24"></property>
-				</bean>
-			</list>
-		</property>
-		<!-- <property name="singleEngineer" ref="singleEngineer"></property> -->
-		
-
-
-	</bean>
+	
+	
 
 </beans>
     

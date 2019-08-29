@@ -7,59 +7,50 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import java.util.List;
 
-@PropertySource("classpath:test.properties")
+
+
 public class Plumber {
-	String name;
-	List<Engineer> enggs;
-	Engineer singleEngineer;
 	
 	@Autowired
-	List<String> injectEngg;
+	String name;
+
+	@Autowired(required = false)
+	List<Engineer> newEngg;
 	
+
 	
-	
-	
-	public List<String> getInjectEngg() {
-		return injectEngg;
-	}
 //
-//	public void setInjectEngg(List<String> injectEngg) {
-//		this.injectEngg = injectEngg;
+//	public Engineer getNewEngg() {
+//		return newEngg;
+//	}
+//
+//	public void setNewEngg(Engineer newEngg) {
+//		this.newEngg = newEngg;
+//	}
+//
+//	public String getName() {
+//		return name;
 //	}
 
 	
-	
-	@Value("${userKey}")
-	String user;
-	
-	
-	public Engineer getSingleEngineer() {
-		return singleEngineer;
+	public List<Engineer> getNewEngg() {
+		return newEngg;
 	}
 
-	@Autowired
-	public void setSingleEngineer(Engineer singleEngineer) {
-		this.singleEngineer = singleEngineer;
+
+
+	public void setNewEngg(List<Engineer> newEngg) {
+		this.newEngg = newEngg;
 	}
 
-	public String getName() {
-		return name;
-	}
-	
-	@Autowired
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public List<Engineer> getEnggs() {
-		return enggs;
-	}
-	
-	
-	public void setEnggs(List<Engineer> enggs) {
-		this.enggs = enggs;
-	}
-	
-	
+
 }

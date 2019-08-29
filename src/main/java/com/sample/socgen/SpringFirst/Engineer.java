@@ -1,7 +1,16 @@
 package com.sample.socgen.SpringFirst;
 
-public class Engineer {
+import org.springframework.beans.factory.annotation.Autowired;
 
+public class Engineer {
+	
+	Engineer(String un, int uid){
+		this.userName = un;
+		this.userId = uid;
+	
+	}
+
+		//@Autowired
 	private String userName;
 
 	public String getUserName() {
@@ -11,7 +20,8 @@ public class Engineer {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-
+	
+	//@Autowired
 	private int userId;
 
 	public int getUserId() {
