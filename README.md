@@ -105,7 +105,7 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
 
 ~~~~
 	<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
@@ -124,6 +124,16 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
 ~~~~
 
 from the xml file
+
+## autowire using annotations
+~~~~
+//By Default autowired check "byName" later on check "byType". if you want to specify explicitly use @Qualifer()
+@Autowired
+@Qualifier("address2")
+public void setAddress(Address address){
+	this.address = address;
+}
+~~~~
 
 
 
