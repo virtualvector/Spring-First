@@ -88,6 +88,40 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
 
 - There is a init and destroy for each bean.
 - There is also a default-init and destroy for all beans as a whole.
-  	
+
+### Auto Wiring
+~~~~
+<bean id="myEngineer" class="com.sample.socgen.SpringFirst.Engineer" autowire="byName">
+    ...
+</bean> 
+~~~~
+
+---------------------
+## for annotations to work
+- do this in the <beans> tag inside xml file
+- add the xml namespaces for annotations
+- and remove the doctype i.e 
+
+~~~~
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"  "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+~~~~
+
+from the xml file
+-link : https://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s11.html
+
+
+~~~~
+	<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+               
+     <context:annotation-config/>
+
+ ~~~~
+
 
 
