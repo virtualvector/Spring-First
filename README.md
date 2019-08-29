@@ -101,14 +101,6 @@ Engineer engineer = context.getBean("myEngineer",Engineer.class);
 - do this in the <beans> tag inside xml file
 - add the xml namespaces for annotations
 	- link : https://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s11.html
-- and remove the doctype i.e 
-
-~~~~
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"  "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
-~~~~
-
-from the xml file
-
 
 
 ~~~~
@@ -123,6 +115,19 @@ from the xml file
      <context:annotation-config/>
 
  ~~~~
+
+
+- and remove the doctype i.e 
+
+~~~~
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"  "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+~~~~
+
+from the xml file
+
+
+
+
 
 
 
